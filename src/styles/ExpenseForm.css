@@ -20,6 +20,10 @@
     width: 20rem;
     max-width: 100%;
   }
+
+  .new-expense__control input:focus,   .new-expense__control input:active{
+    outline: none;
+  }
   
   .new-expense__actions {
     text-align: right;
