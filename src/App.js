@@ -13,13 +13,13 @@ const INITAL_EXPENSES = [
     id: "e2",
     title: "Movie Ticket",
     amount: 10.99,
-    date: new Date(2021, 7, 3)
+    date: new Date(2021, 5, 3)
   },
   {
     id: "e3",
     title: "Hotel",
     amount: 100.25,
-    date: new Date(2022, 6, 28)
+    date: new Date(2022, 3, 28)
   }
 ];
 
@@ -33,10 +33,14 @@ function App() {
     });
   }
 
+  const removeExpenseHandler = (id) => {
+    setExpenses(expenses => expenses.filter(expense => { return expense.id !== id}));
+  }
+
   return (
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler}/>
-      <Expanses items={expenses} setExpenses={setExpenses}/>
+      <Expanses items={expenses} setExpenses={setExpenses} onRemoveExpense={removeExpenseHandler}/>
     </div>
   );
 }

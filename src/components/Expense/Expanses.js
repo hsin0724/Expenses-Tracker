@@ -24,7 +24,11 @@ const Expanses = (props) => {
           onSelectChange={selectChangeHandler}
         />
         <ExpensesChart expenses={FilteredExpenses}/>
+<<<<<<< Updated upstream
         <ExpensesList items={FilteredExpenses}/>
+=======
+        <ExpensesList items={FilteredExpenses} onRemoveExpense={props.onRemoveExpense}/>
+>>>>>>> Stashed changes
       </Card>
     </div>
   );
